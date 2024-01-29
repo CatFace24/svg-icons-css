@@ -25,7 +25,7 @@ fs.readdir(inputDirectory, (err, files) => {
 
     // Check if the optimized content is not empty
     if (encodedSvgData.trim()) {
-      return `.${className} { background-image: url("data:image/svg+xml,${encodedSvgData}"); }`;
+      return `.${className} { background-image: url("data:image/svg+xml,${encodedSvgData}"); height: var(--icon-height, 24px); width: var(--icon-width, 24px); background-size: cover;}`;
     } else {
       return null; // Exclude empty rulesets
     }
