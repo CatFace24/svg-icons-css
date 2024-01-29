@@ -1,0 +1,18 @@
+.button {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    --icon-height: 20px;
+    --icon-width: 20px;
+    /* icon not optimized for button? */
+    gap: 8px;
+    padding: 12px;
+    background: rosybrown;
+    border: 0px;
+}
+
+.button:hover {
+    background: rebeccapurple;
+}
