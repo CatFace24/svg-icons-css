@@ -6,5 +6,6 @@
 4) just put these icon classes wherever you need
 
 ## Next Steps:
-- Adjust javascript with newer properties (see if formatting is also possible)
+- Tweak javascript with newer properties (see if formatting is also possible)
+- Figure out proper sizings in em
 - Combine with design/colour tokens
