@@ -4,3 +4,7 @@ General process:
 2) generateIcons.js reads this folder and converts it into CSS classes, output into output-icons.css
 3) components.css then stylizes the colour / size of compoenents using the icons via variables
 4) just put these icon classes wherever you need
+
+## Next Steps:
+- Adjust javascript with newer properties (see if formatting is also possible)
+- Combine with design/colour tokens
