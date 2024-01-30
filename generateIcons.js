@@ -14,6 +14,12 @@ fs.readdir(inputDirectory, (err, files) => {
 
   // Process each SVG file
   const cssClasses = files.map((filename) => {
+
+    // Filter out non-SVG files
+    if (path.extname(filename).toLowerCase() !== '.svg') {
+      return null;
+    }
+
     const svgFilePath = path.join(inputDirectory, filename);
     const svgContent = fs.readFileSync(svgFilePath, 'utf-8');
 
@@ -25,7 +31,17 @@ fs.readdir(inputDirectory, (err, files) => {
 
     // Check if the optimized content is not empty
     if (encodedSvgData.trim()) {
-      return `.${className} { background-image: url("data:image/svg+xml,${encodedSvgData}"); height: var(--icon-height, 24px); width: var(--icon-width, 24px); background-size: cover;}`;
+      return `.${className} { 
+        height: var(--icon-height, 1.25em);
+        width: var(--icon-width, 1.25em); background-size: cover;
+        background-color: var(--icon-color, black);
+        -webkit-mask-image: url("data:image/svg+xml,${encodedSvgData}");
+        -webkit-mask-size: cover;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url("data:image/svg+xml,${encodedSvgData}");
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        }`;
     } else {
       return null; // Exclude empty rulesets
     }
