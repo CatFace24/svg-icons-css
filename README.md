@@ -15,10 +15,10 @@
 4) Your icons are now made into classes in `./output-icons.css` 
 
 ## General
-1) input-icons-svg folder contains several svg icons
-2) generateIcons.js reads this folder and converts it into CSS classes, output into output-icons.css
-3) components.css then stylizes the colour / size of compoenents using the icons via variables
-4) just put these icon classes wherever you need
+- input-icons-svg folder contains several svg icons
+- generateIcons.js reads this folder and converts it into CSS classes, output into output-icons.css
+- components.css then stylizes the colour / size of compoenents using the icons via variables
+- just put these icon classes wherever you need
 
 ## Next Steps:
 - Tweak javascript with newer properties (see if formatting is also possible)
